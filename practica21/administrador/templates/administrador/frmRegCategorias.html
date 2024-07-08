@@ -1,0 +1,10 @@
+{% extends "administrador/template.html" %}
+{% block content %}
+ <h1> REGISTRAR CATEGORIAS</h1>
+ <a href="{% url 'categorias' %}">CANCELAR</a>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="GUARDAR">
+    </form>
+{% endblock %}

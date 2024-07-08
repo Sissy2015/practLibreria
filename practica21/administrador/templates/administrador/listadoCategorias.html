@@ -1,0 +1,25 @@
+{% extends "administrador/template.html" %}
+{% block content %}
+ <h1> LISTADO DE CATEGORIAS</h1>
+ <a href="{% url 'RegistrarCategorias' %}">NUEVA CATEGORIA</a>
+ <table class="table table-primary">
+    <thead>
+        <tr>
+            <td>Nro</td>
+            <td>Nombre</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for data in lista %}
+        <tr>
+            <th>{{forloop.counter}}</th>
+            <th>{{data.nombre}}</th>
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+ </table>
+
+
+{% endblock %}
